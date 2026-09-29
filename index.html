@@ -183,10 +183,13 @@
     <div class="caminho-conclusao">
       <div class="caminho-conclusao-icon" aria-hidden="true">💡</div>
       <h3 class="caminho-conclusao-title">
-        Você não precisa criar tudo sozinho.
+        Você não está comprando apenas um material.
       </h3>
+      <p class="caminho-conclusao-lead">
+        Está criando mais oportunidades para praticar com seu filho.
+      </p>
       <p class="caminho-conclusao-text">
-        O Fala Clara reúne diferentes recursos para ajudar você a saber o que fazer, o que praticar e como variar esses momentos em casa.
+        Em vez de gastar tempo procurando atividades, imagens e palavras para usar, você já tem diferentes recursos organizados para sentar, praticar e passar alguns minutos juntos.
       </p>
     </div>
 
@@ -377,8 +380,8 @@
     </div>
   </section>
 
-  <!-- 05 — PROVA SOCIAL / IDENTIFICAÇÃO HUMANA (Facebook Comments Mobile - Padrão Skill Low Ticket) -->
-  <section class="social-proof-section" id="depoimentos" aria-labelledby="heading-depoimentos">
+  <!-- 05 — PROVA SOCIAL / FEEDBACKS EM CARROSSEL -->
+  <section class="feedback-carousel-section" id="depoimentos" aria-labelledby="heading-depoimentos">
     <div class="section-header">
       <h2 id="heading-depoimentos">
         Talvez você se reconheça em <span class="hl-coral">uma dessas mães.</span>
@@ -388,149 +391,35 @@
       </p>
     </div>
 
-    <div class="personas-grid" role="list">
-      <!-- Comentário 1: Mariana Souza -->
-      <article class="social-proof-card fb-comment-card" role="listitem">
-        <div class="fb-comment-layout">
-          <div class="fb-avatar-wrap">
-            <img src="assets/avatar-mariana.webp" alt="Mariana Souza" width="44" height="44" loading="lazy" class="fb-avatar-img">
-          </div>
-          <div class="fb-content-col">
-            <div class="fb-bubble-wrap">
-              <div class="fb-bubble">
-                <div class="fb-author-row">
-                  <span class="fb-author-name">Mariana Souza</span>
-                  <span class="fb-author-role">• Mãe do Theo (4 anos)</span>
-                </div>
-                <div class="fb-stars" aria-label="5 estrelas">★★★★★</div>
-                <p class="fb-comment-text">
-                  Só de ter um material muito bem organizado e ter conseguido ele num preço muito bom, vou conseguir dedicar mais tempo ao meu filho do que perder tempo procurando em vários lugares, e olha que já pesquisei e nunca encontro nada.
-                </p>
-                <!-- Badge reações (Like + Love) -->
-                <div class="fb-reactions-badge" aria-hidden="true">
-                  <span class="fb-reaction-icon fb-reaction-like">
-                    <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
-                  </span>
-                  <span class="fb-reaction-icon fb-reaction-love">
-                    <svg viewBox="0 0 24 24" width="9" height="9" fill="#fff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                  </span>
-                  <span class="fb-reaction-count">24</span>
-                </div>
-              </div>
-            </div>
-            <!-- Barra de Ações: Curtir + Horas -->
-            <div class="fb-actions-bar">
-              <button type="button" class="fb-like-action-btn js-fb-like" aria-label="Curtir comentário de Mariana Souza">
-                <svg class="fb-like-svg fb-like-svg--outline" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
-                  <path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.58 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM9 9l4.34-4.34L12 10h9v2l-3 7H9V9zM1 9h4v12H1z"/>
-                </svg>
-                <svg class="fb-like-svg fb-like-svg--filled" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
-                  <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
-                </svg>
-                <span class="fb-like-count" data-base-count="24">24</span>
-              </button>
-              <span class="fb-action-dot">·</span>
-              <time class="fb-action-time">2 h</time>
-            </div>
-          </div>
-        </div>
-      </article>
+    <div class="feedback-carousel-container">
+      <!-- Seta Esquerda Centralizada -->
+      <button type="button" class="feedback-nav-btn feedback-nav-prev" id="feedbackPrev" aria-label="Feedback anterior">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
 
-      <!-- Comentário 2: Camila Ramos -->
-      <article class="social-proof-card fb-comment-card" role="listitem">
-        <div class="fb-comment-layout">
-          <div class="fb-avatar-wrap">
-            <img src="assets/avatar-camila.webp" alt="Camila Ramos" width="44" height="44" loading="lazy" class="fb-avatar-img">
+      <!-- Viewport do Carrossel de Imagens -->
+      <div class="feedback-carousel-viewport" id="feedbackViewport">
+        <div class="feedback-carousel-track" id="feedbackTrack">
+          <!-- Slide 1 -->
+          <div class="feedback-carousel-slide">
+            <img src="assets/feedback-whatsapp-1.webp" alt="Depoimento real de mãe no WhatsApp elogiando os materiais do Kit Fala Clara" width="460" height="860" loading="lazy" class="feedback-img">
           </div>
-          <div class="fb-content-col">
-            <div class="fb-bubble-wrap">
-              <div class="fb-bubble">
-                <div class="fb-author-row">
-                  <span class="fb-author-name">Camila Ramos</span>
-                  <span class="fb-author-role">• Mãe da Laura (5 anos)</span>
-                </div>
-                <div class="fb-stars" aria-label="5 estrelas">★★★★★</div>
-                <p class="fb-comment-text">
-                  Eu ficava muito insegura achando que podia estar ensinando errado ou corrigindo do jeito duro demais. O Guia dos Pais me deu uma paz enorme porque ensina exatamente a postura certa. E a Rotina de 30 Dias organizou tudo o que eu precisava. O material é muito lindo e bem pensado!
-                </p>
-                <div class="fb-reactions-badge" aria-hidden="true">
-                  <span class="fb-reaction-icon fb-reaction-like">
-                    <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
-                  </span>
-                  <span class="fb-reaction-icon fb-reaction-love">
-                    <svg viewBox="0 0 24 24" width="9" height="9" fill="#fff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                  </span>
-                  <span class="fb-reaction-count">31</span>
-                </div>
-              </div>
-            </div>
-            <div class="fb-actions-bar">
-              <button type="button" class="fb-like-action-btn js-fb-like" aria-label="Curtir comentário de Camila Ramos">
-                <svg class="fb-like-svg fb-like-svg--outline" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
-                  <path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.58 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM9 9l4.34-4.34L12 10h9v2l-3 7H9V9zM1 9h4v12H1z"/>
-                </svg>
-                <svg class="fb-like-svg fb-like-svg--filled" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
-                  <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
-                </svg>
-                <span class="fb-like-count" data-base-count="31">31</span>
-              </button>
-              <span class="fb-action-dot">·</span>
-              <time class="fb-action-time">4 h</time>
-            </div>
+          <!-- Slide 2 -->
+          <div class="feedback-carousel-slide">
+            <img src="assets/feedback-whatsapp-2.webp" alt="Depoimento real de mãe no WhatsApp sobre a melhora da fala da filha com o Kit Fala Clara" width="460" height="860" loading="lazy" class="feedback-img">
+          </div>
+          <!-- Slide 3 -->
+          <div class="feedback-carousel-slide">
+            <img src="assets/feedback-whatsapp-3.webp" alt="Depoimento real de mãe no WhatsApp elogiando a praticidade e alegria do filho com o Kit Fala Clara" width="460" height="860" loading="lazy" class="feedback-img">
           </div>
         </div>
-      </article>
+      </div>
 
-      <!-- Comentário 3: Patrícia Menezes -->
-      <article class="social-proof-card fb-comment-card" role="listitem">
-        <div class="fb-comment-layout">
-          <div class="fb-avatar-wrap">
-            <img src="assets/avatar-patricia.webp" alt="Patrícia Menezes" width="44" height="44" loading="lazy" class="fb-avatar-img">
-          </div>
-          <div class="fb-content-col">
-            <div class="fb-bubble-wrap">
-              <div class="fb-bubble">
-                <div class="fb-author-row">
-                  <span class="fb-author-name">Patrícia Menezes</span>
-                  <span class="fb-author-role">• Mãe do Davi (3 anos)</span>
-                </div>
-                <div class="fb-stars" aria-label="5 estrelas">★★★★★</div>
-                <p class="fb-comment-text">
-                  A gente ficava catando atividade solta na internet que não se conversavam. Baixei o kit, imprimi e plastifiquei os cards. Ficaram firmes e levamos até no carro e passeios. O Davi adora encontrar as figurinhas certas. Ver a empolgação dele em falar cada som clareando é impagável!
-                </p>
-                <div class="fb-reactions-badge" aria-hidden="true">
-                  <span class="fb-reaction-icon fb-reaction-like">
-                    <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
-                  </span>
-                  <span class="fb-reaction-icon fb-reaction-love">
-                    <svg viewBox="0 0 24 24" width="9" height="9" fill="#fff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                  </span>
-                  <span class="fb-reaction-count">19</span>
-                </div>
-              </div>
-            </div>
-            <div class="fb-actions-bar">
-              <button type="button" class="fb-like-action-btn js-fb-like" aria-label="Curtir comentário de Patrícia Menezes">
-                <svg class="fb-like-svg fb-like-svg--outline" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
-                  <path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.58 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM9 9l4.34-4.34L12 10h9v2l-3 7H9V9zM1 9h4v12H1z"/>
-                </svg>
-                <svg class="fb-like-svg fb-like-svg--filled" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
-                  <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
-                </svg>
-                <span class="fb-like-count" data-base-count="19">19</span>
-              </button>
-              <span class="fb-action-dot">·</span>
-              <time class="fb-action-time">5 h</time>
-            </div>
-          </div>
-        </div>
-      </article>
+      <!-- Seta Direita Centralizada -->
+      <button type="button" class="feedback-nav-btn feedback-nav-next" id="feedbackNext" aria-label="Próximo feedback">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
     </div>
-
-    <!-- Nota de Transparência Discreta -->
-    <p class="social-transparency-note">
-      Representações de situações comuns de quem utiliza o material na rotina.
-    </p>
   </section>
 
   <!-- 11 — OFERTA (Cards de Vendas) -->
@@ -645,7 +534,7 @@
         <div class="offer-price-box">
           <div class="price-badge-exclusive">DESCONTO ESPECIAL ATIVADO</div>
           <div class="price-anchor">De <del class="price-strike-red">R$ 29,90</del> por apenas</div>
-          <div class="price-main" id="config-price-main">R$ 19,90</div>
+          <div class="price-main" id="config-price-main">R$ 14,90</div>
           <div class="price-tag-sub">⚡ Pagamento único • Sem mensalidades</div>
         </div>
 

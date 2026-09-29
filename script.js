@@ -7,7 +7,7 @@
 // 1. CONFIGURAÇÕES CENTRALIZADAS DO PRODUTO (PLACEHOLDERS CONFIGURÁVEIS)
 const PRODUCT_CONFIG = {
   // Substitua pelo valor de venda desejado ou integre com checkout dinâmico
-  PRICE_MAIN: "R$ 19,90", // [VALOR CONFIGURÁVEL]
+  PRICE_MAIN: "R$ 14,90", // [VALOR CONFIGURÁVEL]
   CHECKOUT_URL: "https://pay.wiapy.com/o6-U_yXX2OPx", // [LINK_CHECKOUT COMPLETO]
   CHECKOUT_URL_BASIC: "https://pay.wiapy.com/_mNXvU3QkaX6", // [LINK_CHECKOUT BÁSICO]
   AGE_RANGE: "crianças de 3 a 7 anos (em fase de aquisição e desenvolvimento dos sons da fala)", // [IDADE]
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const isBasic = Boolean(btn.closest(".basic-offer-card"));
         fbq("track", "InitiateCheckout", {
           content_name: isBasic ? "KIT FALA CLARA BÁSICO" : "KIT FALA CLARA COMPLETO",
-          value: isBasic ? 9.90 : 19.90,
+          value: isBasic ? 9.90 : 14.90,
           currency: "BRL"
         });
       }
@@ -218,18 +218,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 7. INTERATIVIDADE DOS COMENTÁRIOS DE PROVA SOCIAL (CURTIR + CONTADOR)
-  const fbLikeButtons = document.querySelectorAll(".js-fb-like");
-  fbLikeButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const isLiked = btn.classList.toggle("is-liked");
-      const countEl = btn.querySelector(".fb-like-count");
-      if (countEl) {
-        const baseCount = parseInt(countEl.getAttribute("data-base-count"), 10) || 10;
-        countEl.textContent = isLiked ? baseCount + 1 : baseCount;
+  // 7. CARROSSEL DE FEEDBACKS (APENAS IMAGENS COM SETAS CENTRALIZADAS)
+  const feedbackTrack = document.getElementById("feedbackTrack");
+  const feedbackPrevBtn = document.getElementById("feedbackPrev");
+  const feedbackNextBtn = document.getElementById("feedbackNext");
+  const feedbackViewport = document.getElementById("feedbackViewport");
+
+  if (feedbackTrack && feedbackPrevBtn && feedbackNextBtn) {
+    const feedbackSlides = feedbackTrack.querySelectorAll(".feedback-carousel-slide");
+    const totalFeedbackSlides = feedbackSlides.length;
+    let currentFeedbackSlide = 0;
+
+    const updateFeedbackCarousel = (index) => {
+      if (index < 0) {
+        currentFeedbackSlide = totalFeedbackSlides - 1;
+      } else if (index >= totalFeedbackSlides) {
+        currentFeedbackSlide = 0;
+      } else {
+        currentFeedbackSlide = index;
       }
-    });
-  });
+      feedbackTrack.style.transform = `translateX(-${currentFeedbackSlide * 100}%)`;
+    };
+
+    feedbackPrevBtn.addEventListener("click", () => updateFeedbackCarousel(currentFeedbackSlide - 1));
+    feedbackNextBtn.addEventListener("click", () => updateFeedbackCarousel(currentFeedbackSlide + 1));
+
+    // Gestos Touch (Swipe no Mobile)
+    let fbTouchStartX = 0;
+    let fbTouchEndX = 0;
+
+    if (feedbackViewport) {
+      feedbackViewport.addEventListener(
+        "touchstart",
+        (e) => {
+          fbTouchStartX = e.changedTouches[0].screenX;
+        },
+        { passive: true }
+      );
+
+      feedbackViewport.addEventListener(
+        "touchend",
+        (e) => {
+          fbTouchEndX = e.changedTouches[0].screenX;
+          const diffX = fbTouchStartX - fbTouchEndX;
+          if (Math.abs(diffX) > 35) {
+            if (diffX > 0) {
+              updateFeedbackCarousel(currentFeedbackSlide + 1);
+            } else {
+              updateFeedbackCarousel(currentFeedbackSlide - 1);
+            }
+          }
+        },
+        { passive: true }
+      );
+    }
+  }
 
   // 8. CONTADOR DINÂMICO DE ESCASSEZ / URGÊNCIA (6 -> 5 APÓS 3 SEGUNDOS VISÍVEL)
   const urgencyBox = document.getElementById("urgencyAlertBox");
